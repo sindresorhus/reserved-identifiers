@@ -41,13 +41,15 @@ const identifiers = [
 	'with',
 	'yield',
 
-	// Future reserved keywords
+	// Future reserved keywords (strict mode)
 	'implements',
 	'interface',
+	'let',
 	'package',
 	'private',
 	'protected',
 	'public',
+	'static',
 
 	// Not keywords, but still restricted
 	'arguments',
