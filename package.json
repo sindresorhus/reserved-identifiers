@@ -1,6 +1,6 @@
 {
 	"name": "reserved-identifiers",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Provides a list of reserved identifiers for JavaScript",
 	"license": "MIT",
 	"repository": "sindresorhus/reserved-identifiers",
