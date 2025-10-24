@@ -22,3 +22,38 @@ console.log(isReserved('await'));
 ```
 */
 export default function reservedIdentifiers(options?: Options): Set<string>;
+
+/**
+TypeScript's built-in types that are reserved and cannot be used for type names (interfaces, type aliases, enums, classes, type parameters).
+*/
+export type TypeScriptReservedType =
+	| 'any'
+	| 'bigint'
+	| 'boolean'
+	| 'never'
+	| 'null'
+	| 'number'
+	| 'object'
+	| 'string'
+	| 'symbol'
+	| 'undefined'
+	| 'unknown'
+	| 'void';
+
+/**
+Provides a list of TypeScript's built-in types that are reserved and cannot be used for type names (interfaces, type aliases, enums, classes, type parameters).
+
+@example
+```
+import {typeScriptReservedTypes} from 'reserved-identifiers';
+
+const types = typeScriptReservedTypes();
+
+console.log(types.has('any'));
+//=> true
+
+console.log(types.has('unknown'));
+//=> true
+```
+*/
+export function typeScriptReservedTypes(): Set<string>;

@@ -39,6 +39,22 @@ Default: `false`
 
 Include the [global properties](https://tc39.es/ecma262/#sec-value-properties-of-the-global-object) `globalThis`, `Infinity`, `NaN`, and `undefined`. Although not officially reserved, they should typically [not be used as identifiers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined#sect1).
 
+### typeScriptReservedTypes()
+
+Returns a `Set` with TypeScript's built-in types that are reserved and cannot be used for type names (interfaces, type aliases, enums, classes, type parameters).
+
+```js
+import {typeScriptReservedTypes} from 'reserved-identifiers';
+
+const types = typeScriptReservedTypes();
+
+console.log(types.has('any'));
+//=> true
+
+console.log(types.has('unknown'));
+//=> true
+```
+
 ## Related
 
 - [is-identifier](https://github.com/sindresorhus/is-identifier) - Check if a string is a valid JavaScript identifier

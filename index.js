@@ -62,9 +62,29 @@ const globalProperties = [
 	'undefined',
 ];
 
+// These are TypeScript's built-in types that are reserved and cannot be used for type names
+const typeScriptTypes = [
+	'any',
+	'bigint',
+	'boolean',
+	'never',
+	'null',
+	'number',
+	'object',
+	'string',
+	'symbol',
+	'undefined',
+	'unknown',
+	'void',
+];
+
 export default function reservedIdentifiers({includeGlobalProperties = false} = {}) {
 	return new Set([
 		...identifiers,
 		...(includeGlobalProperties ? globalProperties : []),
 	]);
+}
+
+export function typeScriptReservedTypes() {
+	return new Set(typeScriptTypes);
 }
