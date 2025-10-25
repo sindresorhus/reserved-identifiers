@@ -3,6 +3,8 @@ import reservedIdentifiers, {typeScriptReservedTypes} from './index.js';
 
 test('main', t => {
 	t.true(reservedIdentifiers().has('await'));
+	t.true(reservedIdentifiers().has('let'));
+	t.true(reservedIdentifiers().has('static'));
 	t.false(reservedIdentifiers().has('globalThis'));
 	t.true(reservedIdentifiers({includeGlobalProperties: true}).has('globalThis'));
 });
